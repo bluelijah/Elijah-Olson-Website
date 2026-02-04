@@ -88,6 +88,15 @@
         /* Card Shadow */
         --card-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
     }
+
+    /* Light mode: show light logo, hide dark */
+    .nav-logo-dark {
+        display: none;
+    }
+
+    .nav-logo-light {
+        display: block;
+    }
 }
 
 /* ========================================
@@ -339,9 +348,18 @@ button {
     margin-left: 0.5rem;
 }
 
-.nav-logo-svg {
+.nav-logo-img {
     width: 48px;
     height: 48px;
+}
+
+/* Dark mode (default): show dark logo, hide light */
+.nav-logo-dark {
+    display: block;
+}
+
+.nav-logo-light {
+    display: none;
 }
 
 .nav-links {
