@@ -1938,9 +1938,10 @@ button {
 
 .project-image.syllabud-preview {
     background: linear-gradient(135deg, #FAF5FF 0%, #7C3AED 100%) !important;
-    position: relative;
+    position: relative !important;
     overflow: visible !important;
     border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    display: block !important;
 }
 
 .project-card:has(.syllabud-preview) {
@@ -2031,7 +2032,10 @@ button {
 
 /* Syllabud logo text */
 .syllabud-preview .syllabud-logo {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 10;
     text-align: center;
 }
