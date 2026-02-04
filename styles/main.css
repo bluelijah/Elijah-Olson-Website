@@ -9,7 +9,7 @@
     --color-bg-light: #121212;
     --color-surface: rgba(255, 255, 255, 0.05);
     --color-surface-hover: rgba(255, 255, 255, 0.1);
-    --color-text: #ffffff;
+    --color-text: #e8eaed;
     --color-text-muted: #a0a0a0;
     --color-border: rgba(255, 255, 255, 0.1);
 
@@ -333,14 +333,15 @@ button {
 }
 
 .nav-logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--color-primary);
-    text-shadow: var(--glow-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: 0.5rem;
-    padding: 0.25rem 0.6rem;
-    border: 1px solid var(--color-text-muted);
-    border-radius: var(--radius-sm);
+}
+
+.nav-logo-svg {
+    width: 48px;
+    height: 48px;
 }
 
 .nav-links {
@@ -1901,3 +1902,135 @@ button {
 .project-card:nth-child(2) { transition-delay: 0.15s; }
 .project-card:nth-child(3) { transition-delay: 0.2s; }
 .project-card:nth-child(4) { transition-delay: 0.25s; }
+
+/* ========================================
+   Syllabud Project Animated Background
+   ======================================== */
+@keyframes syllabud-sway {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(3deg); }
+}
+
+@keyframes syllabud-spring {
+    0% { transform: scaleY(0); opacity: 0; }
+    60% { transform: scaleY(1.05); opacity: 1; }
+    80% { transform: scaleY(0.98); }
+    100% { transform: scaleY(1); opacity: 1; }
+}
+
+.project-image.syllabud-preview {
+    background: linear-gradient(135deg, #FAF5FF 0%, #7C3AED 100%) !important;
+    position: relative;
+    overflow: visible !important;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.project-card:has(.syllabud-preview) {
+    overflow: visible;
+}
+
+.syllabud-preview .project-image-placeholder {
+    display: none;
+}
+
+.syllabud-preview .syllabud-flower {
+    position: absolute;
+    bottom: 0;
+    transform-origin: bottom center;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.syllabud-preview .syllabud-flower-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform-origin: bottom center;
+}
+
+.syllabud-preview .syllabud-flower-head {
+    flex-shrink: 0;
+}
+
+.syllabud-preview .syllabud-flower-stem {
+    width: 4px;
+    background: linear-gradient(to top, #228B22, #32CD32);
+    border-radius: 2px;
+    margin-top: -18px;
+}
+
+/* Individual flower positions and animations */
+.syllabud-preview .syllabud-flower:nth-child(1) {
+    left: 5%;
+    height: 80px;
+    animation: syllabud-spring 1.2s ease-out 0.2s both;
+}
+.syllabud-preview .syllabud-flower:nth-child(1) .syllabud-flower-inner { animation: syllabud-sway 4.5s ease-in-out infinite; }
+.syllabud-preview .syllabud-flower:nth-child(1) .syllabud-flower-stem { height: 50px; }
+
+.syllabud-preview .syllabud-flower:nth-child(2) {
+    left: 15%;
+    height: 130px;
+    animation: syllabud-spring 1.2s ease-out 0.4s both;
+}
+.syllabud-preview .syllabud-flower:nth-child(2) .syllabud-flower-inner { animation: syllabud-sway 5s ease-in-out infinite; }
+.syllabud-preview .syllabud-flower:nth-child(2) .syllabud-flower-stem { height: 95px; }
+
+.syllabud-preview .syllabud-flower:nth-child(3) {
+    left: 25%;
+    height: 60px;
+    animation: syllabud-spring 1.2s ease-out 0.6s both;
+}
+.syllabud-preview .syllabud-flower:nth-child(3) .syllabud-flower-inner { animation: syllabud-sway 4.2s ease-in-out infinite; }
+.syllabud-preview .syllabud-flower:nth-child(3) .syllabud-flower-stem { height: 30px; }
+
+.syllabud-preview .syllabud-flower:nth-child(4) {
+    left: 75%;
+    height: 100px;
+    animation: syllabud-spring 1.2s ease-out 0.5s both;
+}
+.syllabud-preview .syllabud-flower:nth-child(4) .syllabud-flower-inner { animation: syllabud-sway 4.8s ease-in-out infinite; }
+.syllabud-preview .syllabud-flower:nth-child(4) .syllabud-flower-stem { height: 65px; }
+
+.syllabud-preview .syllabud-flower:nth-child(5) {
+    left: 85%;
+    height: 150px;
+    animation: syllabud-spring 1.2s ease-out 0.3s both;
+}
+.syllabud-preview .syllabud-flower:nth-child(5) .syllabud-flower-inner { animation: syllabud-sway 5.2s ease-in-out infinite; }
+.syllabud-preview .syllabud-flower:nth-child(5) .syllabud-flower-stem { height: 115px; }
+
+.syllabud-preview .syllabud-flower:nth-child(6) {
+    left: 92%;
+    height: 70px;
+    animation: syllabud-spring 1.2s ease-out 0.7s both;
+}
+.syllabud-preview .syllabud-flower:nth-child(6) .syllabud-flower-inner { animation: syllabud-sway 4.4s ease-in-out infinite; }
+.syllabud-preview .syllabud-flower:nth-child(6) .syllabud-flower-stem { height: 40px; }
+
+/* Syllabud logo text */
+.syllabud-preview .syllabud-logo {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+.syllabud-preview .syllabud-logo-text {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #4c1d95 0%, #831843 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.syllabud-preview .syllabud-tagline {
+    font-size: 0.8rem;
+    color: #2d1b4e;
+    font-style: italic;
+    font-weight: 500;
+    margin-top: 4px;
+}
