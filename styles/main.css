@@ -60,6 +60,15 @@
     --nav-height: 70px;
 }
 
+/* Dark mode (default): show dark logo, hide light */
+.nav-logo-dark {
+    display: block;
+}
+
+.nav-logo-light {
+    display: none;
+}
+
 /* ========================================
    Light Mode Theme
    ======================================== */
@@ -353,14 +362,6 @@ button {
     height: 48px;
 }
 
-/* Dark mode (default): show dark logo, hide light */
-.nav-logo-dark {
-    display: block;
-}
-
-.nav-logo-light {
-    display: none;
-}
 
 .nav-links {
     display: flex;
