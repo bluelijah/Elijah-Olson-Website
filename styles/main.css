@@ -2194,7 +2194,7 @@ button {
     display: inline-block;
     color: #177bd6;
     -webkit-text-fill-color: #177bd6;
-    animation: llms-glitch 3s infinite;
+    animation: llms-glitch 6s infinite;
 }
 
 .llms-preview .llms-tagline {
