@@ -2119,15 +2119,15 @@ button {
     }
     86% {
         transform: translateX(-4px) skewX(-3deg);
-        text-shadow: 3px 0 #ff4de6, -3px 0 #4dffee;
+        text-shadow: 3px 0 #17d6d2, -3px 0 #171cd6;
     }
     87% {
         transform: translateX(4px) skewX(1deg);
-        text-shadow: -3px 0 #ff4de6, 3px 0 #4dffee;
+        text-shadow: -3px 0 #17d6d2, 3px 0 #171cd6;
     }
     88% {
         transform: translateX(-1px);
-        text-shadow: 1px 0 #e19dd9, -1px 0 #e19dd9;
+        text-shadow: 1px 0 #177bd6, -1px 0 #177bd6;
         opacity: 0.7;
     }
     89% {
@@ -2137,7 +2137,7 @@ button {
     }
     94% {
         transform: translateX(2px);
-        text-shadow: -2px 0 rgba(255, 77, 230, 0.5);
+        text-shadow: -2px 0 rgba(23, 214, 210, 0.6);
     }
     95% {
         transform: none;
@@ -2146,7 +2146,7 @@ button {
 }
 
 .project-image.llms-preview {
-    background: linear-gradient(135deg, #fdf0fc 0%, #e19dd9 100%) !important;
+    background: linear-gradient(135deg, #06060e 0%, #0d0d1e 60%, #12122a 100%) !important;
     position: relative !important;
     display: flex !important;
     align-items: center;
@@ -2161,24 +2161,20 @@ button {
 .llms-preview .llms-logo-text {
     font-size: 2rem;
     font-weight: 700;
-    background: linear-gradient(135deg, #4c1d95 0%, #831843 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #e8e8f0;
+    -webkit-text-fill-color: #e8e8f0;
 }
 
 .llms-preview .llms-glitch {
     display: inline-block;
-    -webkit-text-fill-color: #4c1d95;
-    background: none;
-    -webkit-background-clip: unset;
-    background-clip: unset;
+    color: #177bd6;
+    -webkit-text-fill-color: #177bd6;
     animation: llms-glitch 6s infinite;
 }
 
 .llms-preview .llms-tagline {
     font-size: 0.8rem;
-    color: #2d1b4e;
+    color: #7070a0;
     font-style: italic;
     font-weight: 500;
     margin-top: 4px;
