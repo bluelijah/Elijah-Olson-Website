@@ -2061,3 +2061,125 @@ button {
     font-weight: 500;
     margin-top: 4px;
 }
+
+/* ========================================
+   LLNL Project Preview
+   ======================================== */
+.project-image.llnl-preview {
+    background: linear-gradient(135deg, #070d1a 0%, #0d2236 60%, #143550 100%) !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.llnl-preview .llnl-logo {
+    text-align: center;
+    z-index: 10;
+}
+
+.llnl-preview .llnl-logo-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    background: linear-gradient(135deg, #4EC45F 0%, #7edc8f 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.llnl-preview .llnl-tagline {
+    font-size: 0.75rem;
+    color: rgba(78, 196, 95, 0.65);
+    font-style: italic;
+    font-weight: 500;
+    margin-top: 4px;
+    letter-spacing: 0.03em;
+}
+
+.project-link-coming-soon {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    opacity: 0.55;
+    cursor: default;
+}
+
+/* ========================================
+   Inside LLMs Project Animated Background
+   ======================================== */
+@keyframes llms-glitch {
+    0%, 85%, 100% {
+        transform: none;
+        text-shadow: none;
+        opacity: 1;
+    }
+    86% {
+        transform: translateX(-4px) skewX(-3deg);
+        text-shadow: 3px 0 #ff4de6, -3px 0 #4dffee;
+    }
+    87% {
+        transform: translateX(4px) skewX(1deg);
+        text-shadow: -3px 0 #ff4de6, 3px 0 #4dffee;
+    }
+    88% {
+        transform: translateX(-1px);
+        text-shadow: 1px 0 #e19dd9, -1px 0 #e19dd9;
+        opacity: 0.7;
+    }
+    89% {
+        transform: none;
+        text-shadow: none;
+        opacity: 1;
+    }
+    94% {
+        transform: translateX(2px);
+        text-shadow: -2px 0 rgba(255, 77, 230, 0.5);
+    }
+    95% {
+        transform: none;
+        text-shadow: none;
+    }
+}
+
+.project-image.llms-preview {
+    background: linear-gradient(135deg, #fdf0fc 0%, #e19dd9 100%) !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.llms-preview .llms-logo {
+    text-align: center;
+    z-index: 10;
+}
+
+.llms-preview .llms-logo-text {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #4c1d95 0%, #831843 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.llms-preview .llms-glitch {
+    display: inline-block;
+    -webkit-text-fill-color: #4c1d95;
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    animation: llms-glitch 6s infinite;
+}
+
+.llms-preview .llms-tagline {
+    font-size: 0.8rem;
+    color: #2d1b4e;
+    font-style: italic;
+    font-weight: 500;
+    margin-top: 4px;
+}
