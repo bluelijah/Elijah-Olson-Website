@@ -1012,6 +1012,10 @@ button {
     color: var(--color-text-muted);
 }
 
+.website-preview-clickme {
+    margin-left: auto;
+}
+
 .website-preview-content {
     display: flex;
     flex-direction: column;
@@ -1135,7 +1139,7 @@ button {
     position: relative;
 }
 
-.website-preview-logo-img {
+.website-preview-content .website-preview-logo-img {
     max-width: 80%;
     max-height: 70%;
     width: auto;
@@ -1966,7 +1970,7 @@ abbr {
         padding: var(--spacing-md);
     }
 
-    .website-preview-logo-img {
+    .website-preview-content .website-preview-logo-img {
         width: auto;
         max-width: 100%;
         height: auto;
